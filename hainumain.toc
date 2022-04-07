@@ -1,0 +1,39 @@
+\ttl@change@i {\@ne }{chapter}{2em}{\vspace {.5\baselineskip }\xiaosi \song }{\thecontentslabel \qquad }{}{\hspace {.5em}\titlerule *[10pt]{$\cdot $}\xiaosi \contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{3em}{\vspace {.25\baselineskip }\wuhao \song }{\thecontentslabel \quad }{}{\hspace {.5em}\titlerule *[10pt]{$\cdot $}\wuhao \contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{4em}{\vspace {.25\baselineskip }\wuhao \song }{\thecontentslabel \quad }{}{\hspace {.5em}\titlerule *[10pt]{$\cdot $}\wuhao \contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {chapter}{摘\nobreakspace {}\nobreakspace {}\nobreakspace {}\nobreakspace {}\nobreakspace {}\nobreakspace {}\nobreakspace {}\nobreakspace {}要}{1}{section*.2}%
+\contentsline {chapter}{\numberline {1}图片的插入方法}{1}{section*.5}%
+\contentsline {section}{\numberline {1.1}海南大学对于插图的要求}{1}{section*.6}%
+\contentsline {section}{\numberline {1.2}\LaTeX \nobreakspace {}中推荐使用的图片格式}{1}{section*.7}%
+\contentsline {section}{\numberline {1.3}单张图片的插入方法}{1}{section*.8}%
+\contentsline {section}{\numberline {1.4}具有子图的图片插入方法}{3}{section*.12}%
+\contentsline {chapter}{\numberline {2}表格的绘制方法}{5}{section*.16}%
+\contentsline {section}{\numberline {2.1}本科生毕业论文的绘表规范}{5}{section*.17}%
+\contentsline {section}{\numberline {2.2}普通表格的绘制方法}{5}{section*.18}%
+\contentsline {section}{\numberline {2.3}长表格的绘制方法}{7}{section*.20}%
+\contentsline {section}{\numberline {2.4}列宽可调表格的绘制方法}{9}{section*.22}%
+\contentsline {subsection}{\numberline {2.4.1}表格内某单元格内容过长的情况}{9}{section*.23}%
+\contentsline {subsection}{\numberline {2.4.2}对物理量符号进行注释的情况}{11}{section*.25}%
+\contentsline {chapter}{\numberline {3}数学公式的输入方法}{13}{section*.26}%
+\contentsline {section}{\numberline {3.1}本科生毕业论文的公式规范}{13}{section*.27}%
+\contentsline {section}{\numberline {3.2}生成\nobreakspace {}\LaTeX \nobreakspace {}数学公式的两种方法}{13}{section*.28}%
+\contentsline {subsection}{\numberline {3.2.1}基于\nobreakspace {}MathType\nobreakspace {}软件的数学公式生成方法}{13}{section*.29}%
+\contentsline {subsection}{\numberline {3.2.2}基于\nobreakspace {}MATLAB\nobreakspace {}软件的数学公式生成方法}{14}{section*.30}%
+\contentsline {section}{\numberline {3.3}数学字体}{14}{section*.31}%
+\contentsline {section}{\numberline {3.4}行内公式}{15}{section*.33}%
+\contentsline {section}{\numberline {3.5}行间公式}{16}{section*.38}%
+\contentsline {section}{\numberline {3.6}可自动调整大小的定界符}{17}{section*.40}%
+\contentsline {section}{\numberline {3.7}数学重音符号}{17}{section*.41}%
+\contentsline {chapter}{\numberline {4}罗列、定理和代码环境使用方法}{19}{section*.42}%
+\contentsline {section}{\numberline {4.1}单层罗列环境}{19}{section*.43}%
+\contentsline {section}{\numberline {4.2}定理环境}{20}{section*.45}%
+\contentsline {section}{\numberline {4.3}代码环境}{21}{section*.49}%
+\contentsline {section}{\numberline {4.4}算法环境}{22}{section*.50}%
+\contentsline {chapter}{结\hskip 1em\relax 论}{24}{section*.52}%
+\contentsline {chapter}{参考文献}{26}{section*.56}%
+\contentsline {chapter}{外文资料}{27}{section*.58}%
+\contentsline {chapter}{中文译文}{28}{section*.60}%
+\contentsfinish 

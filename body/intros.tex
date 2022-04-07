@@ -31,13 +31,13 @@
 \item{HNUThesis.bst}：默认的~BibTeX~样式文件，如果你想修改样式，如~IEEE~要求的样式, 只需将~IEEEtran.bst~的文件名~改为~HNUThesis.bst~即可。
 \end{itemize}
 需要说明的是，以上文件名并不是固定的，各位同学可以新建一个~tex~文件，例如~algorithm.tex，放在~body~目录下，并且在~hnumain.tex~中调用:
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
     \include{body/algorithm.tex}
-\end{verbatim}
+\end{Verbatim}
 来引用之。当然你也可以重命名这些文件，只要~include~中的文件名是存在且合法，~\LaTeX~总能找到这些文件的。
 
 在你写作某一章节的时候，你可能需要随时预览排版效果并~Debug，这时你可以在其他章节的\verb|\include|命令前加上一个\%，这代表注释掉本行，例如：
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
            正文部分
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +48,7 @@
 %\include{body/equations}
 %\include{body/others}
 %\include{body/conclusion}
-\end{verbatim}
+\end{Verbatim}
 那么，编译的时候就只编译未加~\%~的一章，在这个例子中，即本章~intros。
 
 理论上，并不一定要把每章放在不同的文件中。但是这种自顶向下，分章节写作、编译的方法有利于提高效率，大大减少~Debug~过程中的编译时间，同时减小风险。
@@ -93,7 +93,7 @@
             \makebox[\textwidth][l]{Wrap | Indent | INS | LINE |Spell | TeX:UTF-8 | -src~ 等。}
       \end{enumerate}
   \item 如果在~pdf~书签中，中文显示乱码的话，则注意以下说明：
-    \begin{verbatim}
+    \begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
         \usepackage{CJKutf8}
         % 1. 如果使用CJKutf8
         %    Hyperref中应使用unicode参数
@@ -105,7 +105,7 @@
         %CJKbookmarks=true,
         unicode=true
         ]{hyperref}
-     \end{verbatim}
+     \end{Verbatim}
   \item 建议采用以下两种编译方式：
   \begin{enumerate}
     \item latex + bibtex + latex + latex + dvi2pdf. 在这种编译情况下，对应的~hnumain.tex~文件的第一行是\verb|\def\usewhat{dvipdfmx}|~ （缺省设置）。 此时，所有图片文件应该保存为~.eps~格式，如~figures~文件夹里~.eps~图片。

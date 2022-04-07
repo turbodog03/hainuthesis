@@ -30,7 +30,7 @@
 \usepackage{txfonts}                        % 字体宏包
 \usepackage{bm}                             % 处理数学公式中的黑斜体的宏包
 \usepackage[amsmath,thmmarks,hyperref]{ntheorem}  % 定理类环境宏包，其中 amsmath 选项用来兼容 AMS LaTeX 的宏包
-\usepackage{CJKnumb}                        % 提供将阿拉伯数字转换成中文数字的命令
+% \usepackage{CJKnumb}                        % 提供将阿拉伯数字转换成中文数字的命令
 \usepackage{indentfirst}                    % 首行缩进宏包
 \usepackage{CJKutf8}                        % 用在UTF8编码环境下，它可以自动调用CJK，同时针对UTF8编码作了设置
 %\usepackage{hypbmsec}                      % 用来控制书签中标题显示内容
@@ -94,3 +94,24 @@ rulesepcolor=\color{red!20!green!20!blue!20}
             breaklinks=true
             ]{hyperref}
 \fi
+
+\usepackage[unicode,             
+            pdfstartview=FitH,
+            bookmarksnumbered=true,
+            bookmarksopen=true,
+            colorlinks=true, %注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
+            pdfborder=001,   %注释掉此项则交叉引用为彩色边框
+            citecolor=black,
+            linkcolor=black,
+            anchorcolor=black,
+            urlcolor=black,
+            breaklinks=true
+            ]{hyperref}
+
+        
+%下面两个package是为了为verbatim添加换行。
+%%%%%%%%%%%%%%%%%% Add line break in verbatim %%%%%%%%%%%%%%%%%%%
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+
+
