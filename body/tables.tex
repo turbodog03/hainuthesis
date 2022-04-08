@@ -36,7 +36,7 @@ $D$(in) & $P_u$(lbs) & $u_u$(in) & $\beta$ & $G_f$(psi.in)\\
 其绘制表格的代码及其说明如下。
 \vspace{1em}\noindent\hrule
 
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 \begin{table}[htbp]
 \caption{表标题}\label{标签名(通常为 tab:tablename)}
 \vspace{0.5em}\centering\wuhao
@@ -54,17 +54,17 @@ $D$(in) & $P_u$(lbs) & $u_u$(in) & $\beta$ & $G_f$(psi.in)\\
 \end{tabular}
 \vspace{\baselineskip}
 \end{table}
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
 
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 table环境是一个将表格嵌入文本的浮动环境。
 \wuhao命令将表格的字号设置为五号字（10.5pt），在绘制表格结束退出时，不需要将字号再改回为\xiaosi，正文字号默认为小四号字（12pt）。
 tabular环境的必选参数由每列对应一个格式字符所组成：c表示居中，l表示左对齐，r表示右对齐，其总个数应与表的列数相同。此外，@{文本}可以出现在任意两个上述的列格式之间，其中的文本将被插入每一行的同一位置。表格的各行以\\分隔，同一行的各列则以&分隔。
 \toprule、\midrule和\bottomrule三个命令是由booktabs宏包提供的，其中\toprule和\bottomrule分别用来绘制表格的第一条（表格最顶部）和第三条（表格最底部）水平线，\midrule用来绘制第二条（表头之下）水平线，且第一条和第三条水平线的线宽为1.5pt，第二条水平线的线宽为1pt。
 引用方法：“如表~\ref{tab:tablename}~所示”。
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
 
@@ -126,7 +126,7 @@ tabular环境的必选参数由每列对应一个格式字符所组成：c表示
 绘制长表格的代码及其说明如下。
 \vspace{1em}\noindent\hrule
 
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 \wuhao\begin{longtable}{cc...c}
 \caption{表标题}\label{标签名(通常为 tab:tablename)}\\
 \toprule[1.5pt] 表头第1个格 & 表头第2个格 & ... & 表头第n个格\\ \midrule[1pt]
@@ -141,10 +141,10 @@ tabular环境的必选参数由每列对应一个格式字符所组成：c表示
 ...................................................\\
 表中数据(m,1) & 表中数据(m,2) & ... & 表中数据(m,n)\\
 \end{longtable}\xiaosi
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 在绘制长表格的前面留出一个空白行，并在第2行的一开始全局定义长表格的字号为五号字，这样能够保证长表格之前段落的行距保持不变。
 在绘制长表格结束后，需要\xiaosi命令重新将字号改为小四号字。
 \endhead之前的文字描述的是第2页及其之后各页的标题或表头；
@@ -152,7 +152,7 @@ tabular环境的必选参数由每列对应一个格式字符所组成：c表示
 同理，\endfoot之前的文字描述的是除最后一页之外每页的表格底部内容；
 \endlastfoot之前的文字描述的是最后一页的表格底部内容，若无此命令，
 则最后一页的表格底部内容由\endfoot命令确定；由于规范中长表格每页底部内容均相同（水平粗线），因此模板中没有用到\endlastfoot命令。
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
 \section{列宽可调表格的绘制方法}
@@ -175,7 +175,7 @@ Value & Name & Alternate names, and names for sets of the given size\\\midrule[1
 \end{table}
 绘制这种表格的代码及其说明如下。
 \vspace{1em}\noindent\hrule
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 \begin{table}[htbp]
 \caption{表标题}\label{标签名(通常为 tab:tablename)}
 \vspace{0.5em}\wuhao
@@ -191,14 +191,14 @@ Value & Name & Alternate names, and names for sets of the given size\\\midrule[1
 \end{tabularx}
 \vspace{\baselineskip}
 \end{table}
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 tabularx环境共有两个必选参数：第1个参数用来确定表格的总宽度，这里取为排版表格能达到的最大宽度——正文宽度\textwidth；第2 个参数用来确定每列格式，其中标为X的项表示该列的宽度可调，其宽度值由表格总宽度确定。
 标为X的列一般选为单元格内容过长而无法置于一行的列，这样使得该列内容能够根据表格总宽度自动分行。若列格式中存在不止一个X 项，则这些标为X的列的列宽相同，因此，一般不将内容较短的列设为X。
 标为X的列均为左对齐，因此其余列一般选为l（左对齐），这样可使得表格美观，但也可以选为c或r。
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
 \subsection{对物理量符号进行注释的情况}
@@ -227,24 +227,24 @@ tabularx环境共有两个必选参数：第1个参数用来确定表格的总�
 
 \vspace{1em}\noindent\hrule
 
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 \begin{tabularx}{\textwidth}{@{}l@{\quad}r@{— — —}X@{}}
 式中 & symbol-1 & symbol-1的注释内容；\\
      & symbol-2 & symbol-2的注释内容；\\
      .............................；\\
      & symbol-m & symbol-m的注释内容。
 \end{tabularx}\vspace{\wordsep}
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule
 
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
    tabularx环境的第1个参数选为正文宽度，第2个参数里面各个符号的意义为：
    第1个@{}表示在“式中”二字左侧不插入任何文本，“式中”二字能够在正文中左对齐，若无此项，则“式中”二字左侧会留出一定的空白；
    @{\quad}表示在“式中”和物理量符号间插入一个空铅宽度的空白；
    @{— — —}实现插入破折号的功能，它由三个1/2的中文破折号构成；
    第2个@{}表示在注释内容靠近正文右边界的地方能够实现右对齐。
-\end{Verbatim}
+\end{VerbWithBreak}
 
 \noindent\hrule\vspace{1em}
 

@@ -56,7 +56,7 @@ MATLAB~中提供了一个~latex~函数，它可将符号表达式转化为~\LaTe
 \section{数学字体}
 在数学模式下，常用的数学字体命令有如下几种：
 
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 \mathnormal或无命令 用数学字体打印文本；
 \mathit             用斜体（\itshape）打印文本；
 \mathbf             用粗体（\bfseries）打印文本；
@@ -64,7 +64,7 @@ MATLAB~中提供了一个~latex~函数，它可将符号表达式转化为~\LaTe
 \mathsf             用无衬线字体（\sffamily）打印文本；
 \mathtt             用打印机字体（\ttfamily）打印文本；
 \mathcal            用书写体打印文本；
-\end{Verbatim}
+\end{VerbWithBreak}
 
 在学位论文撰写中，只需要用到上面提到的~\verb|\mathit|、\verb|\mathbf|~ 和~\verb|\mathrm|~命令。若要得到~Times New Roman~ 的数学字体，则需要调用~txfonts~宏包（此宏包实际上采用的是~Nimbus Roman No9 L~字体，
 它是开源系统中使用的免费字体，其字符字体与~Times New Roman~字体几乎完全相同）；若要得到粗体数学字体，则需要调用~bm~宏包。表~\ref{tab:fonts}~中分别列出了得到阿拉伯数字、拉丁字母和希腊字母
@@ -147,10 +147,10 @@ $\mathrm{i}$、 $\mathrm{j}$~———虚数单位 & $\piup$———圆周率\\
 \left(\sum_{k=\frac12}^{N^2}\right)
 \end{equation}
 式(\ref{nodelimiter})和式(\ref{delimiter})是在~\LaTeX~中分别输入如下代码得到的。
-\begin{Verbatim}[breaklines=true, breaksymbol=, breakanywheresymbolpre=]
+\begin{VerbWithBreak}
 (\sum_{k=\frac12}^{N^2})
 \left(\sum_{k=\frac12}^{N^2}\right)
-\end{Verbatim}
+\end{VerbWithBreak}
 \verb|\left|~和~\verb|\right|~总是成对出现的，若只需在公式一侧有可自动调整大小的定界符，则只要用“.”代替另一侧那个无需打印出来的定界符即可。
 若想获得关于此部分内容的更多信息，可参见~\href{http://tug.ctan.org/cgi-bin/ctanPackageInformation.py?id=voss-mathmode}{Math mode}~文档的第~8~章“Brackets, braces and parentheses”。
 
