@@ -148,7 +148,7 @@
 % 重定义参考文献样式，来自thu
 \makeatletter
 \renewenvironment{thebibliography}[1]{
-    \titleformat{\chapter}{\raggedright\sihao\hei}{\chaptername}{2em}{}
+    \titleformat{\chapter}{\center\sanhao\hei}{\chaptername}{2em}{}
    \chapter*{\bibname}
    \wuhao
    \list{\@biblabel{\@arabic\c@enumiv}}
@@ -233,6 +233,7 @@
     \vspace{112pt}  \vspace{60pt}
     \setlength{\@title@width}{8.1cm}
     {\sanhao\song{
+      %封面项目在这增删。如果需要新项目，去188行处定义
     \begin{tabular}{lc}
         题\qquad 目&  \underline{\makebox[\@title@width][c]{\@ctitle}}\\[6pt]
         学\qquad 号&  \underline{\makebox[\@title@width][c]{\@cnumber}}\\[6pt]
@@ -274,6 +275,7 @@
 \fancyhead[CE]{\song\xiaowu \@ctitle}
 \fancyfoot[C]{\song\xiaowu ~\thepage~} %首页页脚格式
 }
+\ifShowCabs
 \addcontentsline{toc}{chapter}{摘~~~~~~~~要}
 \chapter*{\centering\xiaoer\ 摘\qquad 要}
 \song\defaultfont
@@ -283,8 +285,22 @@
 \hangafter=1\hangindent=52.3pt\noindent   %如果取消该行注释，关键词换行时将会自动缩进
 \noindent
 {\hei\xiaosi 关键词： \@ckeywords}
-
+\else
+\fi
 
 %%%%%%%%%%%%%%%%%%%   English Abstract  %%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO：添加times new roman字体支持
+\ifShowEabs
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{\centering\xiaoer\ Abstract}
+\song\defaultfont
+\@eabstract
+\vspace{\baselineskip}
+
+\hangafter=1\hangindent=52.3pt\noindent
+\noindent
+{\hei\xiaosi Key Words： \@ekeywords}
+\else
+\fi
 }
 \makeatother
