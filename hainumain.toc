@@ -17,24 +17,25 @@
 \contentsline {section}{\numberline {3}长表格的绘制方法}{7}{section*.22}%
 \contentsline {section}{\numberline {4}列宽可调表格的绘制方法}{9}{section*.24}%
 \contentsline {subsection}{\numberline {1}表格内某单元格内容过长的情况}{9}{section*.25}%
-\contentsline {subsection}{\numberline {2}对物理量符号进行注释的情况}{10}{section*.27}%
-\contentsline {chapter}{\numberline {3}数学公式的输入方法}{13}{section*.28}%
-\contentsline {section}{\numberline {1}本科生毕业论文的公式规范}{13}{section*.29}%
-\contentsline {section}{\numberline {2}生成\nobreakspace {}\LaTeX \nobreakspace {}数学公式的两种方法}{13}{section*.30}%
-\contentsline {subsection}{\numberline {1}基于\nobreakspace {}MathType\nobreakspace {}软件的数学公式生成方法}{13}{section*.31}%
-\contentsline {subsection}{\numberline {2}基于\nobreakspace {}MATLAB\nobreakspace {}软件的数学公式生成方法}{14}{section*.32}%
-\contentsline {section}{\numberline {3}数学字体}{14}{section*.33}%
-\contentsline {section}{\numberline {4}行内公式}{15}{section*.35}%
-\contentsline {section}{\numberline {5}行间公式}{16}{section*.40}%
-\contentsline {section}{\numberline {6}可自动调整大小的定界符}{17}{section*.42}%
-\contentsline {section}{\numberline {7}数学重音符号}{17}{section*.43}%
-\contentsline {chapter}{\numberline {4}罗列、定理和代码环境使用方法}{19}{section*.44}%
-\contentsline {section}{\numberline {1}单层罗列环境}{19}{section*.45}%
-\contentsline {section}{\numberline {2}定理环境}{20}{section*.47}%
-\contentsline {section}{\numberline {3}代码环境}{21}{section*.51}%
-\contentsline {section}{\numberline {4}算法环境}{22}{section*.52}%
-\contentsline {chapter}{结\hskip 1em\relax 论}{24}{section*.54}%
-\contentsline {chapter}{参考文献}{25}{section*.57}%
-\contentsline {chapter}{外文资料}{26}{section*.59}%
-\contentsline {chapter}{中文译文}{27}{section*.61}%
+\contentsline {subsection}{\numberline {2}对物理量符号进行注释的情况}{11}{section*.27}%
+\contentsline {section}{\numberline {5}为表格添加注释的方法}{12}{section*.28}%
+\contentsline {chapter}{\numberline {3}数学公式的输入方法}{14}{section*.30}%
+\contentsline {section}{\numberline {1}本科生毕业论文的公式规范}{14}{section*.31}%
+\contentsline {section}{\numberline {2}生成\nobreakspace {}\LaTeX \nobreakspace {}数学公式的两种方法}{14}{section*.32}%
+\contentsline {subsection}{\numberline {1}基于\nobreakspace {}MathType\nobreakspace {}软件的数学公式生成方法}{14}{section*.33}%
+\contentsline {subsection}{\numberline {2}基于\nobreakspace {}MATLAB\nobreakspace {}软件的数学公式生成方法}{15}{section*.34}%
+\contentsline {section}{\numberline {3}数学字体}{15}{section*.35}%
+\contentsline {section}{\numberline {4}行内公式}{16}{section*.37}%
+\contentsline {section}{\numberline {5}行间公式}{17}{section*.42}%
+\contentsline {section}{\numberline {6}可自动调整大小的定界符}{18}{section*.44}%
+\contentsline {section}{\numberline {7}数学重音符号}{18}{section*.45}%
+\contentsline {chapter}{\numberline {4}罗列、定理和代码环境使用方法}{20}{section*.46}%
+\contentsline {section}{\numberline {1}单层罗列环境}{20}{section*.47}%
+\contentsline {section}{\numberline {2}定理环境}{21}{section*.49}%
+\contentsline {section}{\numberline {3}代码环境}{22}{section*.53}%
+\contentsline {section}{\numberline {4}算法环境}{23}{section*.54}%
+\contentsline {chapter}{结\hskip 1em\relax 论}{25}{section*.56}%
+\contentsline {chapter}{参考文献}{26}{section*.59}%
+\contentsline {chapter}{外文资料}{27}{section*.61}%
+\contentsline {chapter}{中文译文}{28}{section*.63}%
 \contentsfinish 

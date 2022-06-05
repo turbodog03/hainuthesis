@@ -197,7 +197,7 @@ Value & Name & Alternate names, and names for sets of the given size\\\midrule[1
 \begin{VerbWithBreak}
 tabularx环境共有两个必选参数：第1个参数用来确定表格的总宽度，这里取为排版表格能达到的最大宽度——正文宽度\textwidth；第2 个参数用来确定每列格式，其中标为X的项表示该列的宽度可调，其宽度值由表格总宽度确定。
 标为X的列一般选为单元格内容过长而无法置于一行的列，这样使得该列内容能够根据表格总宽度自动分行。若列格式中存在不止一个X 项，则这些标为X的列的列宽相同，因此，一般不将内容较短的列设为X。
-标为X的列均为左对齐，因此其余列一般选为l（左对齐），这样可使得表格美观，但也可以选为c或r。
+标为X的列均为左对齐，因此其余列一般选为l（左对齐），这样可使得表格美观，但也可以选为c或r。如果想要X项为中心对齐，可以在后面加<{\centering}，形同\begin{tabularx}{\textwidth}{cX<{\centering}X<{\centering}}
 \end{VerbWithBreak}
 
 \noindent\hrule
@@ -251,6 +251,72 @@ tabularx环境共有两个必选参数：第1个参数用来确定表格的总�
 由此方法生成的注释内容应紧邻待注释公式并置于其下方，因此不能将代码放入~\verb|table|~浮动环境中。但此方法不能实现自动转页接排，
 可能会在当前页剩余空间不够时，全部移动到下一页而导致当前页出现很大空白。因此在需要转页处理时，还请您手动将需要转页的代码放入一个
 新的~\verb|tabularx|~环境中，将原来的一个~\verb|tabularx|~环境拆分为两个~\verb|tabularx|~环境。
+
+\section{为表格添加注释的方法}
+首先给出这种情况下的一个例子如表~\ref{tab:table4}~所示。
+\begin{table}[!ht]
+   \caption{海南省相关数据}\label{tab:table4}
+   \vspace{0.5em}\centering\wuhao
+   \begin{threeparttable}
+   \begin{tabularx}{\textwidth}{c*5{X<{\centering}}}
+   \toprule[1.5pt]
+   年份/年 & 农业机械总动力/千瓦 & 农村耗电量/亿千瓦小时 & 农田有效灌溉面积/千公顷 & 互联网络宽带接入用户/万户 & 长途光缆线路长度/万公里\\
+   \midrule[1pt]
+   2011年 & 444.33 & 7.07 & 247.51 & 16.2 & 0.33\\
+   2012年 & 479.66 & 8.59 & 286.75 & 21.4 & 0.33\\
+   2013年 & 502.1 & 9.63 & 260.93 & 26 & 0.33\\
+   2014年 & 517.31 & 10.89 & 259.92 & 29.7 & 0.33\\
+   2015年 & 511.59 & 13.02 & 263.99 & 42.2 & 0.34\\
+   2016年 & 516.57 & 13.89 & 289.95 & 60.2 & 0.34\\
+   2017年 & 569.8 & 15.52 & 289.25 & 79.6 & 0.34\\
+   2018年 & 565.82 & 17.41 & 290.48 & 82.6 & 0.09\\
+   2019年 & 581.23 & 18.68 & 290.63 & 99.7 & 0.32 \\
+   2020年 & 615.57 & 20.96 & 292.21 & 111.2 & 0.32 \\
+   \bottomrule[1.5pt]
+   \end{tabularx}
+   \begin{tablenotes}
+       \footnotesize
+       \item[1] 数据来源：国家统计局
+   \end{tablenotes}
+   \end{threeparttable}
+   \vspace{\baselineskip}
+\end{table}
+
+绘制这种表格的代码及其说明如下。
+\vspace{1em}\noindent\hrule
+\begin{VerbWithBreak}
+   \begin{table}[!ht]
+      \caption{海南省相关数据}
+      \vspace{0.5em}\centering\wuhao
+      \begin{threeparttable}
+      \begin{tabularx}{\textwidth}{c*5{X<{\centering}}}
+      \toprule[1.5pt]
+      年份/年 & 农业机械总动力/千瓦 & 农村耗电量/亿千瓦小时 & 农田有效灌溉面积/千公顷 & 互联网络宽带接入用户/万户 & 长途光缆线路长度/万公里\\
+      \midrule[1pt]
+      2011年 & 444.33 & 7.07 & 247.51 & 16.2 & 0.33\\
+      2012年 & 479.66 & 8.59 & 286.75 & 21.4 & 0.33\\
+      2013年 & 502.1 & 9.63 & 260.93 & 26 & 0.33\\
+      2014年 & 517.31 & 10.89 & 259.92 & 29.7 & 0.33\\
+      2015年 & 511.59 & 13.02 & 263.99 & 42.2 & 0.34\\
+      2016年 & 516.57 & 13.89 & 289.95 & 60.2 & 0.34\\
+      2017年 & 569.8 & 15.52 & 289.25 & 79.6 & 0.34\\
+      2018年 & 565.82 & 17.41 & 290.48 & 82.6 & 0.09\\
+      2019年 & 581.23 & 18.68 & 290.63 & 99.7 & 0.32 \\
+      2020年 & 615.57 & 20.96 & 292.21 & 111.2 & 0.32 \\
+      \bottomrule[1.5pt]
+      \end{tabularx}
+      \begin{tablenotes}
+          \footnotesize
+          \item[1] 数据来源：国家统计局
+      \end{tablenotes}
+      \end{threeparttable}
+      \vspace{\baselineskip}
+   \end{table}
+\end{VerbWithBreak}
+   \noindent\hrule
+\begin{VerbWithBreak}
+   这里使用了threeparttable宏包。在tablenotes环境中添加注释即可。
+\end{VerbWithBreak}
 
 若想获得绘制表格的更多信息，参见网络上的~\href{http://www.tug.org/pracjourn/2007-1/mori/}{Tables in \LaTeXe: Packages and Methods}~文档。
 
