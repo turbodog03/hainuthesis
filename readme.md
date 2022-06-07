@@ -58,7 +58,13 @@
   pages       = {页码},
 }
 ```
-引用时，在引用处（文中）添加`\cite{article_example}`(article_example的位置对照上面给出的bibtex的格式。可以自定，一个文献一个名字就行)
+引用时，在引用处（文中）添加`\cite{article_example}`(article_example的位置对照上面给出的bibtex的格式。可以自定，一个文献一个名字就行)。添加网页参考同理，.bib文件中有模板。
+
+### 高级
+#### 自定义格式
+文章的各种格式定义（包括封面、目录、正文……等等等等）在`setup\format.tex`中，所有的宏包都在`setup\package.tex`文件中。
+
+如要修改参考文献的输出格式，可以修改`./HNUThesis.bst`。
 #### 编译
 编辑完成后，在overleaf左上角的menu栏中，setting项选择：
 - compiler xelatex
